@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp/SignIn</title>
+    <link href="shoes logo.jpeg" rel="icon" type="image/icon type" />
+    <link rel="stylesheet" href="signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body style="background-color: rgb(255, 255, 255)">
+    <div id="navbar">
+      <img
+        align="middle"
+        src="shoes logo.jpeg"
+        alt="logo"
+        width="85"
+        height="85"
+      />
+      <h11>SHOES DEKHO</h11>
+    </div>
+    <div class="container">
+      <button id="exitButton">&times;</button>
+      <div class="form-box">
+        <h1 id="title">Sign Up</h1>
+        <form>
+          <div class="input-group">
+            <div class="input-field" id="nameField">
+              <i class="fa-solid fa fa-user"></i>
+              <input type="text" placeholder="Name" />
+            </div>
+
+            <div class="input-field">
+              <i class="fa-solid fa fa-envelope"></i>
+              <input type="email" placeholder="Email" />
+            </div>
+
+            <div class="input-field">
+              <i class="fa-solid fa fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+            <p><a href="#">Reset password</a></p>
+          </div>
+          <div class="btn-field">
+            <button type="button" id="signunBtn">Sign up</button>
+            <button type="button" id="signinBtn" class="disable">
+              Sign in
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      let signupBtn = document.getElementById("signunBtn");
+      let signinBtn = document.getElementById("signinBtn");
+      let nameField = document.getElementById("nameField");
+      let title = document.getElementById("title");
+
+      signinBtn.onclick = function () {
+        nameField.style.maxHeight = "0";
+        title.innerHTML = "Sign in";
+        signupBtn.classList.add("disable");
+        signinBtn.classList.remove("disable");
+      };
+
+      signupBtn.onclick = function () {
+        nameField.style.maxHeight = "60px";
+        title.innerHTML = "Sign Up";
+        signupBtn.classList.remove("disable");
+        signipBtn.classList.add("disable");
+      };
+      document
+        .getElementById("exitButton")
+        .addEventListener("click", function () {
+          window.location.href = "shoes webpage.html";
+        });
+    </script>
+  </body>
+</html>
