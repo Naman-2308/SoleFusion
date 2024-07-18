@@ -148,10 +148,14 @@ h3 {
   display: flex; /* Use flexbox */
   align-items: center; /* Align items vertically */
   flex-direction: row;
+  margin-top: 0;
+  gap: 10px;
+  justify-content: space-between; /* Distribute space evenly */
+  padding: 0 20px; /* Optional: add padding to the container */
 }
 
 /* Style the dropdown button */
-.dropbtn {
+.dropdown-container h1 {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   border-radius: 5px;
@@ -163,7 +167,8 @@ h3 {
   font-weight: lighter;
   cursor: pointer;
   margin-right: 10px; /* Optional: Add spacing between buttons */
-  margin-left: 119.5px;
+  position: relative;
+  margin: 0 60px; /* Add horizontal spacing between buttons */
 }
 
 /* Style the dropdown content (hidden by default) */
@@ -178,9 +183,10 @@ h3 {
   align-items: center; /* Align items vertically */
   justify-content: center; /* Align items horizontally */
   text-align: center; /* Align text horizontally */
-  margin-left: 50px;
-  margin-right: 50px;
-  justify-content: space-around;
+  position: absolute; /* Required for dropdown positioning */
+  top: 100%; /* Position below the header */
+  left: 50%; /* Start positioning from the center */
+  transform: translateX(-50%); /* Center align the dropdown */
   z-index: 1;
 }
 
@@ -198,10 +204,10 @@ h3 {
 }
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: flex; /* Use flexbox */
-  flex-direction: column; /* Stack items vertically */
-  position: absolute;
+.dropdown-container h1:hover .dropdown-content {
+  display: block; /* Use block */
+ 
+ 
 }
 .b:hover {
   background-color: #ffffff;
