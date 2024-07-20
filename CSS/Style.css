@@ -89,48 +89,20 @@ h1 {
   cursor: pointer;
 }
 
-.slider {
+.banner {
   position: relative;
   width: 100%;
   overflow: hidden;
   margin-top: 0px;
   border-style: none;
-  margin-left: -2.5px;
-  button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-  }
-
-  .prev {
-    left: 10px;
-  }
-
-  .next {
-    right: 10px;
-  }
-}
-
-.slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slides img {
-  width: 1525px;
-  height: 710px;
-}
-.slides a {
-  flex: 0 0 100%;
-}
-
-h3 {
+   margin-left: -2.5px;
+   img{
+    width: 1525px;
+    height: 710px;
+   }
+   
+} 
+ h3 {
   margin-top: 100px;
   font-size: 60px;
   text-align: center;
@@ -148,10 +120,13 @@ h3 {
   display: flex; /* Use flexbox */
   align-items: center; /* Align items vertically */
   flex-direction: row;
-  margin-top: 0;
+  margin-top:0;
   gap: 10px;
   justify-content: space-between; /* Distribute space evenly */
   padding: 0 20px; /* Optional: add padding to the container */
+  background-color: #ffffff;
+  border: 2.5px solid rgba(0, 0, 0, .15);
+  
 }
 
 /* Style the dropdown button */
@@ -176,7 +151,7 @@ h3 {
   display: none;
   font-family: "Mulish", sans-serif;
   font-size: small;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   text-decoration: underline;
   width: 175px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for dropdown list */
@@ -188,6 +163,7 @@ h3 {
   left: 50%; /* Start positioning from the center */
   transform: translateX(-50%); /* Center align the dropdown */
   z-index: 1;
+  
 }
 
 /* Style the links inside the dropdown */
